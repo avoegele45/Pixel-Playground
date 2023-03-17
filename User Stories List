@@ -1,0 +1,22 @@
+1) As a developer, I want to be able to easily connect the product with external sources 
+   so that we can account for any third-party companies the client works with down the line. 
+   
+2) As a developer, I want to be able to keep track of previous versions of the product
+   in order to easily add and remove changes to the interface.
+
+3) As a client, I want to be able to hold important information such as user accounts 
+   all in one place so that I am able to keep track of it and easily access such information.
+   
+4) As a client, I want to be able to additionally market the product as an app on the mobile market
+   in order to reach a wider audience.
+   
+5) As a customer, I want to be able to change the skin/design of the application to different
+   themes so that I can choose one that appeals to me. 
+   
+6) As a client, I want to offer lots of customizable features about the product in order to
+   appeal to a larger audience. 
+   
+7) As a client, I want to be able to display ads so that I can increase revenue. 
+
+8) As an admin, I want my own login that allows me to make changes to the system so that I can
+   edit features such as changing or adding ads. 
