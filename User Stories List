@@ -65,3 +65,30 @@
       
 23)	As the developer, I want the system to be made in a modular way through different components so 
       that games can be added/removed or modified without affecting the rest of the system.
+      
+24)   As a player, I want the games to have a minimal amount of bugs and crashes so that I can play them without interruption.
+
+25)   As a player, I want their to be a large amount of games so that I do not get bored of playing the same few games.
+
+26)   As a player, I want the games to be stable and with few bugs so that the gameplay is consistent with what the developers had in mind.
+
+27)   As a player, I want their to be hidden easter eggs of the developers in the games 
+      because it would reward those who look for secrets and make the games more fun.
+      
+28)   As a player, I want the interface to be fun and nice to look at so that I feel more engaged with the game.
+
+29)   As a player, I want context-driven tutorials that help guide me through the gameplay so I can understand the game.
+
+30)   As a player, I want the help screens to be implemented as bubbles over the help icon 
+      so that they are non-intrusive and do not ruin the flow of the game.
+      
+31)   As a player, I want the error messages to be humorous and light-hearted so that unexpected game crashes don't ruin the fun as much.
+
+32)   As a player, I want the games to be designed with testability in mind so that a new update to the games will not introduce new bugs or regressions.
+
+33)   As a developer, I want the suite of games to be modular and testable so that 
+      I can reduce the amount of bugs and regressions created during development.
+      
+34)   As a player, I want it to be easy for a game to be added so that I can enjoy more games.
+
+35)   As a developer, I want the suite of games to be designed with scalability in mind so that I can more easily add new games and users.
