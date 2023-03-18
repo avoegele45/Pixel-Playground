@@ -24,41 +24,44 @@
 9)	As a user, I want a dashboard where the games are, so I can easily choose the game I want 
    to play.
    
-10)	As a user, I want a dashboard where my overall stats are shown, so I can easily see my 
+10) As a client, I want the dashboard and games to have a lot of customizable options in order to 
+    appeal to a larger audience
+   
+11)	As a user, I want a dashboard where my overall stats are shown, so I can easily see my 
       top scores for each game.
       
-11)	As the client, I want a dashboard that doesn’t redirect me or produce popups as I don’t 
+12)	As the client, I want a dashboard that doesn’t redirect me or produce popups as I don’t 
       want to lose us customers.
       
-12)	As the client, I want each of the games to have an overall theme so that everything feels 
+13)	As the client, I want each of the games to have an overall theme so that everything feels 
       like they belong together.
       
-13)   As a user, I want each of the games to have fun visuals as this will boost the coolness 
+14)   As a user, I want each of the games to have fun visuals as this will boost the coolness 
       of the system.
       
-14)   As a user, I want to be able to see my overall stats while I play each game, so that I 
+15)   As a user, I want to be able to see my overall stats while I play each game, so that I 
       can try to keep track of my best score and my current attempt.
       
-15)   As the client, I want the games to appear on the dashboard with some fun effect, so that 
+16)   As the client, I want the games to appear on the dashboard with some fun effect, so that 
       it boost the coolness of the system.
       
-16)   As the client, I want the users to have to sign in prior to playing any games so that we 
+17)   As the client, I want the users to have to sign in prior to playing any games so that we 
       can keep track of who accesses our system.
       
-17)   As the client, I want the user’s stats to be stored in a cookie so that we can still use 
+18)   As the client, I want the user’s stats to be stored in a cookie so that we can still use 
       a login system while we choose which database we want to use.
       
-18)	As the client, I want to allow customers to create their own username and password so that 
+19)	As the client, I want to allow customers to create their own username and password so that 
       they can easily adjust their account without needing any outside help.
       
-19)	As the developer, I want to encapsulate the business logic of logging in by using a Login 
+20)	As the developer, I want to encapsulate the business logic of logging in by using a Login 
       Controller, so that I can easily allow for signing in via Google and Facebook accounts later on.
       
-20)	As the user, I want the game to auto-login when I go to the gaming webpage by using the 
+21)	As the user, I want the game to auto-login when I go to the gaming webpage by using the 
       information from the cookie, so that I don’t have to sign in each time I go to the webpage.
       
-21)	As the developer, I want the auto-login to say “Welcome Back, ‘username’!”, so that the system 
+22)	As the developer, I want the auto-login to say “Welcome Back, ‘username’!”, so that the system 
       discretely uses the cookie’s information.
       
-22)	As the developer, I want the system to be made in a modular way through different components so 
+23)	As the developer, I want the system to be made in a modular way through different components so 
       that games can be added/removed or modified without affecting the rest of the system.
