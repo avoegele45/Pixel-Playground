@@ -23,48 +23,63 @@
    
 9)	As a user, I want a dashboard where the games are, so I can easily choose the game I want 
    to play.
+   -Create a main dashboard with game choices.
    
 10) As a client, I want the dashboard and games to have a lot of customizable options in order to 
-    appeal to a larger audience
+    appeal to a larger audience.
+    -Add customizable features like change of theme colors, order of buttons based on last played...
    
 11)	As a user, I want a dashboard where my overall stats are shown, so I can easily see my 
       top scores for each game.
+      -Display base stats for each game on dashboard
       
 12)	As the client, I want a dashboard that doesn’t redirect me or produce popups as I don’t 
       want to lose us customers.
+      -Create a main dashboard with layered canvases and choose to display which one
       
 13)	As the client, I want each of the games to have an overall theme so that everything feels 
       like they belong together.
+      -Create one cohesive theme that all games follow (retro)
       
 14)   As a user, I want each of the games to have fun visuals as this will boost the coolness 
       of the system.
+      -Add visual effects to all of the games
       
 15)   As a user, I want to be able to see my overall stats while I play each game, so that I 
       can try to keep track of my best score and my current attempt.
+      -Display main stats while playing the game including score, attempts, etc.
       
 16)   As the client, I want the games to appear on the dashboard with some fun effect, so that 
       it boost the coolness of the system.
+      -Add specialized effects based on the game on the dashboard
       
 17)   As the client, I want the users to have to sign in prior to playing any games so that we 
       can keep track of who accesses our system.
+      -Add a feature that requires users to sign in before playing
       
 18)   As the client, I want the user’s stats to be stored in a cookie so that we can still use 
       a login system while we choose which database we want to use.
+      -Create the login system that uses cookies to store information
       
 19)	As the client, I want to allow customers to create their own username and password so that 
       they can easily adjust their account without needing any outside help.
+      -Allow the user to create their own username and password for the login
       
 20)	As the developer, I want to encapsulate the business logic of logging in by using a Login 
       Controller, so that I can easily allow for signing in via Google and Facebook accounts later on.
+      -Separate the login system by using a Login Controller
       
 21)	As the user, I want the game to auto-login when I go to the gaming webpage by using the 
       information from the cookie, so that I don’t have to sign in each time I go to the webpage.
+      -Add a feature that allows people to auto-login by the use of the cookie
       
 22)	As the developer, I want the auto-login to say “Welcome Back, ‘username’!”, so that the system 
       discretely uses the cookie’s information.
+      -Add a quick message to the user when they are auto-logged in
       
 23)	As the developer, I want the system to be made in a modular way through different components so 
       that games can be added/removed or modified without affecting the rest of the system.
+      -While building, add several components to keep things separated for ease of removal/addition of games
       
 24)   As a player, I want the games to have a minimal amount of bugs and crashes so that I can play them without interruption.
 
