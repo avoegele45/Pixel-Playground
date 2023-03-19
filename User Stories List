@@ -142,16 +142,22 @@
 
 42) As a user, I want my preferences to be saved, so I do not have to keep selecting the same things.
 
+ -when selecting preferences and settings, save them to the cookie automatically so that users do not need to keep reselecting the same game setitngs.
+ 
 43) As a client, I want all of the games to be playable with one hand using the 4 arrow keys, so the second hand could be used for other things. 
-
+   -have most if not all interactions take place withe the four arrow keys so any game can be played with one hand
+   
 44) As a client, I want user actions such separate from the game logic, so it can easily be modified to accept other types of input. 
-
-45) As a user, I want to be able to pause my games, so I can take a break and come back to my progress.
-
-46) As a client, I want to allow my players to be able to resume their game by default when logging in if there is a save file, so
+   -impliment input outside of game logic so that it can be modified to take any type of input and fed to game
+   
+45) As a client, I want to allow my players to be able to resume their game by default when logging in if there is a save file, so
     I don't have to go through the effort of relaunching the game.
+    -check to see if there is saved game data in cookie
+    -popup/other interface to ask if user wants to continue the game that is in the saved cookie 
 
-47) As a user, I want to be able to save my game and have my progress saved so I can resume it later. 
+46) As a user, I want to be able to save my game and have my progress saved so I can resume it later. 
+   -add save button that saves the current gameplay data to a cookie
 
-48) As a user, I want to be able to get rid of previous games and start new ones, so I don't have to play the same game.
+47) As a user, I want to be able to get rid of previous games and start new ones, so I don't have to play the same game.
+   -add button to discard any save game that is currently saved in the cookie data
 
