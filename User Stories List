@@ -91,4 +91,32 @@
       
 34)   As a player, I want it to be easy for a game to be added so that I can enjoy more games.
 
-35)   As a developer, I want the suite of games to be designed with scalability in mind so that I can more easily add new games and users.
+35)   As a developer, I want the suite of games to be designed with scalability in mind so that I can more easily add new games and users. 
+
+36) As a client I want secure storage of user information. 
+
+
+37) As a client, I want to have medium-quality graphics and sounds that allow the player to be immersed in the game. 
+
+38) As a client, I want the users game to load quickly over the internet, so game assets should be less than 100k in size.
+
+39) As a client I want to provide engaging and functional sound design. 
+
+40) As a client I want the player to be informed by game sounds.
+
+41) As a user, I want to be able to mute sounds if I choose
+
+42) As a user I want my preferences to be saved so I do not have to keep selecting the same things
+
+43) As a client, I want all of the games to be playable with one hand using the 4 arrow keys, second hand could be used. 
+
+44) As a client, I want user actions such separate from the game logic so it can easily be modified to accept other types of input. 
+
+45) As a user, I want to be able to pause my games
+
+46) As a client I want to allow my players to be able to resume their game by default when logging in if there is a save file
+
+47) As a user, I want to be able to save my game and have my progress saved so I can resume it later. 
+
+48) As a user, I want to be able to get rid of previous games and start new ones.
+
