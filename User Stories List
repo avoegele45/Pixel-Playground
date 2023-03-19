@@ -1,25 +1,44 @@
 1) As a developer, I want to be able to easily connect the product with external sources 
    so that we can account for any third-party companies the client works with down the line. 
+   - Implement standard interfaces and protocols when developing the system
+   - Avoid code coupling when creating classes and files
    
 2) As a developer, I want to be able to keep track of previous versions of the product
    in order to easily add and remove changes to the interface.
+   -Create html and javascript code files in GitHub
+   -Branch off of files and commit changes modularly 
+   -Access and revert to previous versions if needed
 
 3) As a client, I want to be able to hold important information such as user accounts 
    all in one place so that I am able to keep track of it and easily access such information.
+   -Create an sql database
+   -Bridge it to the code for the website
+   -Create forms to obtain user account information and store in the database
    
 4) As a client, I want to be able to additionally market the product as an app on the mobile market
    in order to reach a wider audience.
+   - Avoid using game or business logic when writing the GUI code in order to make it easier to display the GUI on a phone screen
    
 5) As a customer, I want to be able to change the skin/design of the application to different
    themes so that I can choose one that appeals to me. 
+   - Create different theme layouts using CSS and make them invisible
+   - Make a 'settings' page that has the options of different themes available
+   - Connect the buttons to their respective themes that activate the CSS style
    
 6) As a client, I want to offer lots of customizable features about the product in order to
    appeal to a larger audience. 
+   - Create different customizable styles such as menu display, game modes, different layouts, etc.
    
 7) As a client, I want to be able to display ads so that I can increase revenue. 
+   - Create a bridge to a potential API
+   - Make a stub that delivers a few sample ads
+   - Put the ads in rotation on a timer so they cycle
 
 8) As an admin, I want my own login that allows me to make changes to the system so that I can
    edit features such as changing or adding ads. 
+   - Create an account in the database that has the username 'SoggieMuffins' and password '1234'
+   - When the user is logged in under that account grant them access to a page usually hidden
+   - Add special controls to the page such as buttons that allow said admin to change things like user accounts, ads, etc.
    
 9)	As a user, I want a dashboard where the games are, so I can easily choose the game I want 
    to play.
