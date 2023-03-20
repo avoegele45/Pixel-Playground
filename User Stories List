@@ -101,31 +101,43 @@
       -While building, add several components to keep things separated for ease of removal/addition of games
       
 24)   As a player, I want the games to have a minimal amount of bugs and crashes so that I can play them without interruption.
+      - Test the games throughly to make sure there are no gameplay signifcant bugs or crashes
 
-25)   As a player, I want their to be a large amount of games so that I do not get bored of playing the same few games.
+25)   As a player, I want there to be a large amount of games so that I do not get bored of playing the same few games.
+      - Add as many games as possible to the selection
 
 26)   As a player, I want the games to be stable and with few bugs so that the gameplay is consistent with what the developers had in mind.
+      - During testing, make sure that the gameplay is consistent with what we had in mind
 
 27)   As a player, I want their to be hidden easter eggs of the developers in the games 
       because it would reward those who look for secrets and make the games more fun.
+      - Add some hidden easter eggs among the games
       
 28)   As a player, I want the interface to be fun and nice to look at so that I feel more engaged with the game.
+      - Create a good-looking interface that focuses on fun and readability
 
 29)   As a player, I want context-driven tutorials that help guide me through the gameplay so I can understand the game.
+      - Create helpful tutorials for all of the games
 
 30)   As a player, I want the help screens to be implemented as bubbles over the help icon 
       so that they are non-intrusive and do not ruin the flow of the game.
+      - Add the tutorials into the games as pop-ups whenever the player hovers over the help icon
       
 31)   As a player, I want the error messages to be humorous and light-hearted so that unexpected game crashes don't ruin the fun as much.
+      - Keep the error messages humorous
 
 32)   As a player, I want the games to be designed with testability in mind so that a new update to the games will not introduce new bugs or regressions.
+      - Test the games throughly after new changes
 
 33)   As a developer, I want the suite of games to be modular and testable so that 
       I can reduce the amount of bugs and regressions created during development.
+      - During development, make sure to keep the suite of games modular and testable
       
 34)   As a player, I want it to be easy for a game to be added so that I can enjoy more games.
+      - Make the suite of games modular and easily modifiable
 
-35)   As a developer, I want the suite of games to be designed with scalability in mind so that I can more easily add new games and users. 
+35)   As a developer, I want the suite of games to be designed with scalability in mind so that I can more easily add new games and users.
+      - During development, ensure that the suite of games can scale with a growing userbase and game selection
 
 36) As a client, I want secure storage of user information, so that users trust our company. 
 
