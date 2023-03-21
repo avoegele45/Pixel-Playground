@@ -1,15 +1,17 @@
-1) As a developer, I want to be able to easily connect the product with external sources 
+If story is marked with ***, more important task that should be implimented, if marked with ###, it is an important task but is either reliant on the more important tasks or other functionality that needs built. If left unmarked, it is still an important feature, but one that might be done at a later sprint 
+
+1) *** (important concept to follow during development) As a developer, I want to be able to easily connect the product with external sources 
    so that we can account for any third-party companies the client works with down the line. 
    - Implement standard interfaces and protocols when developing the system
    - Avoid code coupling when creating classes and files
    
-2) As a developer, I want to be able to keep track of previous versions of the product
+2) *** As a developer, I want to be able to keep track of previous versions of the product
    in order to easily add and remove changes to the interface.
    -Create html and javascript code files in GitHub
    -Branch off of files and commit changes modularly 
    -Access and revert to previous versions if needed
 
-3) As a client, I want to be able to hold important information such as user accounts 
+3) *** As a client, I want to be able to hold important information such as user accounts 
    all in one place so that I am able to keep track of it and easily access such information.
    -Create an sql database
    -Bridge it to the code for the website
@@ -19,13 +21,13 @@
    in order to reach a wider audience.
    - Avoid using game or business logic when writing the GUI code in order to make it easier to display the GUI on a phone screen
    
-5) As a customer, I want to be able to change the skin/design of the application to different
+5) *** As a customer, I want to be able to change the skin/design of the application to different
    themes so that I can choose one that appeals to me. 
    - Create different theme layouts using CSS and make them invisible
    - Make a 'settings' page that has the options of different themes available
    - Connect the buttons to their respective themes that activate the CSS style
    
-6) As a client, I want to offer lots of customizable features about the product in order to
+6) *** As a client, I want to offer lots of customizable features about the product in order to
    appeal to a larger audience. 
    - Create different customizable styles such as menu display, game modes, different layouts, etc.
    
@@ -34,21 +36,21 @@
    - Make a stub that delivers a few sample ads
    - Put the ads in rotation on a timer so they cycle
 
-8) As an admin, I want my own login that allows me to make changes to the system so that I can
+8) ### As an admin, I want my own login that allows me to make changes to the system so that I can
    edit features such as changing or adding ads. 
    - Create an account in the database that has the username 'SoggieMuffins' and password '1234'
    - When the user is logged in under that account grant them access to a page usually hidden
    - Add special controls to the page such as buttons that allow said admin to change things like user accounts, ads, etc.
    
-9)	As a user, I want a dashboard where the games are, so I can easily choose the game I want 
+9)	*** As a user, I want a dashboard where the games are, so I can easily choose the game I want 
    to play.
    -Create a main dashboard with game choices.
    
-10) As a client, I want the dashboard and games to have a lot of customizable options in order to 
+10) *** As a client, I want the dashboard and games to have a lot of customizable options in order to 
     appeal to a larger audience.
     -Add customizable features like change of theme colors, order of buttons based on last played...
    
-11)	As a user, I want a dashboard where my overall stats are shown, so I can easily see my 
+11) ###	As a user, I want a dashboard where my overall stats are shown, so I can easily see my 
       top scores for each game.
       -Display base stats for each game on dashboard
       
@@ -56,31 +58,31 @@
       want to lose us customers.
       -Create a main dashboard with layered canvases and choose to display which one
       
-13)	As the client, I want each of the games to have an overall theme so that everything feels 
+13) ***	As the client, I want each of the games to have an overall theme so that everything feels 
       like they belong together.
       -Create one cohesive theme that all games follow (retro)
       
-14)   As a user, I want each of the games to have fun visuals as this will boost the coolness 
+14) ***  As a user, I want each of the games to have fun visuals as this will boost the coolness 
       of the system.
       -Add visual effects to all of the games
       
-15)   As a user, I want to be able to see my overall stats while I play each game, so that I 
+15) ###  As a user, I want to be able to see my overall stats while I play each game, so that I 
       can try to keep track of my best score and my current attempt.
       -Display main stats while playing the game including score, attempts, etc.
       
-16)   As the client, I want the games to appear on the dashboard with some fun effect, so that 
+16) ***  As the client, I want the games to appear on the dashboard with some fun effect, so that 
       it boost the coolness of the system.
       -Add specialized effects based on the game on the dashboard
       
-17)   As the client, I want the users to have to sign in prior to playing any games so that we 
+17)  *** As the client, I want the users to have to sign in prior to playing any games so that we 
       can keep track of who accesses our system.
       -Add a feature that requires users to sign in before playing
       
-18)   As the client, I want the user’s stats to be stored in a cookie so that we can still use 
+18) ###  As the client, I want the user’s stats to be stored in a cookie so that we can still use 
       a login system while we choose which database we want to use.
       -Create the login system that uses cookies to store information
       
-19)	As the client, I want to allow customers to create their own username and password so that 
+19) ***	As the client, I want to allow customers to create their own username and password so that 
       they can easily adjust their account without needing any outside help.
       -Allow the user to create their own username and password for the login
       
@@ -88,11 +90,11 @@
       Controller, so that I can easily allow for signing in via Google and Facebook accounts later on.
       -Separate the login system by using a Login Controller
       
-21)	As the user, I want the game to auto-login when I go to the gaming webpage by using the 
+21)	*** As the user, I want the game to auto-login when I go to the gaming webpage by using the 
       information from the cookie, so that I don’t have to sign in each time I go to the webpage.
       -Add a feature that allows people to auto-login by the use of the cookie
       
-22)	As the developer, I want the auto-login to say “Welcome Back, ‘username’!”, so that the system 
+22) ***	As the developer, I want the auto-login to say “Welcome Back, ‘username’!”, so that the system 
       discretely uses the cookie’s information.
       -Add a quick message to the user when they are auto-logged in
       
@@ -100,20 +102,20 @@
       that games can be added/removed or modified without affecting the rest of the system.
       -While building, add several components to keep things separated for ease of removal/addition of games
       
-24)   As a player, I want the games to have a minimal amount of bugs and crashes so that I can play them without interruption.
+24)  *** As a player, I want the games to have a minimal amount of bugs and crashes so that I can play them without interruption.
       - Test the games throughly to make sure there are no gameplay signifcant bugs or crashes
 
 25)   As a player, I want there to be a large amount of games so that I do not get bored of playing the same few games.
       - Add as many games as possible to the selection
 
-26)   As a player, I want the games to be stable and with few bugs so that the gameplay is consistent with what the developers had in mind.
+26)  *** As a player, I want the games to be stable and with few bugs so that the gameplay is consistent with what the developers had in mind.
       - During testing, make sure that the gameplay is consistent with what we had in mind
 
 27)   As a player, I want their to be hidden easter eggs of the developers in the games 
       because it would reward those who look for secrets and make the games more fun.
       - Add some hidden easter eggs among the games
       
-28)   As a player, I want the interface to be fun and nice to look at so that I feel more engaged with the game.
+28) ***  As a player, I want the interface to be fun and nice to look at so that I feel more engaged with the game.
       - Create a good-looking interface that focuses on fun and readability
 
 29)   As a player, I want context-driven tutorials that help guide me through the gameplay so I can understand the game.
@@ -129,7 +131,7 @@
 32)   As a player, I want the games to be designed with testability in mind so that a new update to the games will not introduce new bugs or regressions.
       - Test the games throughly after new changes
 
-33)   As a developer, I want the suite of games to be modular and testable so that 
+33) *** (important concept to follow during development)  As a developer, I want the suite of games to be modular and testable so that 
       I can reduce the amount of bugs and regressions created during development.
       - During development, make sure to keep the suite of games modular and testable
       
@@ -139,7 +141,7 @@
 35)   As a developer, I want the suite of games to be designed with scalability in mind so that I can more easily add new games and users.
       - During development, ensure that the suite of games can scale with a growing userbase and game selection
 
-36) As a client, I want secure storage of user information, so that users trust our company. 
+36) ### As a client, I want secure storage of user information, so that users trust our company. 
 
 37) As a client, I want to have medium-quality graphics and sounds, so that it allows the player to be immersed in the game. 
 
@@ -150,16 +152,16 @@
 
 40) As a client, I want the player to be informed by game sounds, so it adds to the experience.
 
-41) As a user, I want to be able to mute sounds if I choose, in case I am trying to be quiet.
+41) *** As a user, I want to be able to mute sounds if I choose, in case I am trying to be quiet.
 
-42) As a user, I want my preferences to be saved, so I do not have to keep selecting the same things.
+42) ### As a user, I want my preferences to be saved, so I do not have to keep selecting the same things.
 
  -when selecting preferences and settings, save them to the cookie automatically so that users do not need to keep reselecting the same game setitngs.
  
 43) As a client, I want all of the games to be playable with one hand using the 4 arrow keys, so the second hand could be used for other things. 
    -have most if not all interactions take place withe the four arrow keys so any game can be played with one hand
    
-44) As a client, I want user actions such separate from the game logic, so it can easily be modified to accept other types of input. 
+44) *** As a client, I want user actions such separate from the game logic, so it can easily be modified to accept other types of input. 
    -impliment input outside of game logic so that it can be modified to take any type of input and fed to game
    
 45) As a client, I want to allow my players to be able to resume their game by default when logging in if there is a save file, so
