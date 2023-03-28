@@ -1,4 +1,4 @@
-import { LoginController } from "./login-controller";
+import { LoginController } from "./login-controller.js";
 
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
@@ -8,6 +8,7 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    location.href = 'index.html';
     LoginController.login(username, password)
+
+    // location.href = 'index.html';
 })
