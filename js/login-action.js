@@ -10,5 +10,5 @@ loginButton.addEventListener("click", (e) => {
 
     LoginController.login(username, password)
 
-    // location.href = 'index.html';
+    location.href = 'index.html';
 })
