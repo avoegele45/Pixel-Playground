@@ -7,5 +7,5 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    location.href = 'home.html';
+    location.href = 'index.html';
 })
