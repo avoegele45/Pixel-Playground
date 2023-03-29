@@ -1,9 +1,19 @@
 export class CookieManager {
-   
+    
+    /** 
+    * Adds a key-value pair to the cookie
+    * @param {string} key 
+    * @param {string} value
+    */
+    
     static setCookieKey(key, value) {
         document.cookie = `${key}=${value};`
     }
 
+    /** 
+    * Returns an object containing all of the key-value pairs in the cookie
+    * @return {Object} Cookie key-value pairs
+    */
     static getCookieObject() {
         let cookie = {}
 
