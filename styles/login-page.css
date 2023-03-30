@@ -4,12 +4,16 @@ html {
 
 body {
     height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Andale Mono, monospace;
     display: grid;
     justify-items: center;
     align-items: center;
-    background-color: #3a3a3a;
+    background-color: lightgray;  
+    background-image: url("../assets/images/loginBackground.jpg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #main-holder {
@@ -36,10 +40,11 @@ body {
   }
   
 .login-form-field {
-    border: none;
+    border-style: outset;
     border-bottom: 1px solid #3a3a3a;
     margin-bottom: 10px;
     border-radius: 3px;
+    font-family: Andale Mono, monospace;
     outline: none;
     padding: 0px 0px 5px 5px;
   }
@@ -49,9 +54,10 @@ body {
     padding: 7px;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    background-color: #3a3a3a;
+    font-family: Andale Mono, monospace;
+    background-color: #ff0088;
     cursor: pointer;
     outline: none;
   }
