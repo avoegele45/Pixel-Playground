@@ -1,7 +1,7 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
-const score = 0;
+let score = 0;
 const grid = 48;
 const gridGap = 10;
 
@@ -305,6 +305,9 @@ function loop() {
     if (froggerRow === 0 && col % 3 === 0 &&
         // check to see if there isn't a scored frog already there
         !scoredFroggers.find(frog => frog.x === col * grid)) {
+
+          score = score + 5;
+          document.getElementById("scoreboard").innerHTML = score;
       scoredFroggers.push(new Sprite({
         ...frogger,
         x: col * grid,
