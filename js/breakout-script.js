@@ -1,6 +1,9 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
+let score = 0;
+document.getElementById("scoreboard").innerHTML = score;
+
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
 // of 4 colors: red, orange, green, and yellow
 const level1 = [
@@ -131,6 +134,8 @@ function loop() {
     ball.y = 260;
     ball.dx = 0;
     ball.dy = 0;
+    score = 0;
+    document.getElementById("scoreboard").innerHTML = score;
   }
 
   // check to see if ball collides with paddle. if they do change y velocity
@@ -148,6 +153,11 @@ function loop() {
     const brick = bricks[i];
 
     if (collides(ball, brick)) {
+
+      //increase score
+      score++;
+      document.getElementById("scoreboard").innerHTML = score;
+      
       // remove brick from the bricks array
       bricks.splice(i, 1);
 

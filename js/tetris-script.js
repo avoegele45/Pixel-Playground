@@ -2,6 +2,9 @@
 
 // get a random integer between the range of [min,max]
 // @see https://stackoverflow.com/a/1527820/2124254
+
+let score = 0;
+document.getElementById("scoreboard").innerHTML = score;
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -94,7 +97,8 @@ function getRandomInt(min, max) {
     // check for line clears starting from the bottom and working our way up
     for (let row = playfield.length - 1; row >= 0; ) {
       if (playfield[row].every(cell => !!cell)) {
-  
+        score = score + 10;
+        document.getElementById("scoreboard").innerHTML = score;
         // drop every row above this one
         for (let r = row; r >= 0; r--) {
           for (let c = 0; c < playfield[r].length; c++) {
