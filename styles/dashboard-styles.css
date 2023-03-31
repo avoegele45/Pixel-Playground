@@ -15,3 +15,7 @@ body {
 button{
     font-family: Andale Mono, monospace;
 }
+
+table{
+    color: white;
+}
