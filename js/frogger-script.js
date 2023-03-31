@@ -1,8 +1,12 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
+const score = 0;
 const grid = 48;
 const gridGap = 10;
+
+// set scoreboard
+document.getElementById('scoreboard').innerHTML = score;
 
 // a simple sprite prototype function
 function Sprite(props) {
@@ -305,7 +309,7 @@ function loop() {
         ...frogger,
         x: col * grid,
         y: frogger.y + 5
-      }));
+      }));  
     }
 
     // reset frogger if not on obstacle in river
@@ -314,6 +318,7 @@ function loop() {
       frogger.y = grid * 13;
     }
   }
+
 }
 
 // listen to keyboard events to move frogger
@@ -339,6 +344,7 @@ document.addEventListener('keydown', function(e) {
   // clamp frogger position to stay on screen
   frogger.x = Math.min( Math.max(0, frogger.x), canvas.width - grid);
   frogger.y = Math.min( Math.max(grid, frogger.y), canvas.height - grid * 2);
+
 });
 
 // start the game
