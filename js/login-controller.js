@@ -6,7 +6,5 @@ export class LoginController {
         if (DBProxy.validateLogin(username, password)) {
             DBProxy.saveLoginInfo(username, password)
         }
-
-        console.log(CookieManager.getCookieObject());
     }
 }
