@@ -1,22 +1,5 @@
 import { CookieManager } from "./cookie-manager.js"
 
-export class DBProxy {
-
-    static _db = CookieDB;
-
-    static validateLogin(username, password) {
-        return DBProxy._db.validateLogin(username, password);
-    }
-
-    static saveLoginInfo(username, password) {
-        DBProxy._db.saveLoginInfo(username, password);
-    }
-
-    static saveData(table, username, key, value) {
-        DBProxy._db.saveData(table, username, key, value);
-    }
-}
-
 class CookieDB {
     static _createFullKey(table, username, key) {
         let prefix = `${table}-${username}`;
@@ -44,6 +27,22 @@ class CookieDB {
         let cookie = CookieManager.getCookieObject();
 
         return cookie[fullKey];
+    }
+}
+export class DBProxy {
+
+    static _db = CookieDB;
+
+    static validateLogin(username, password) {
+        return DBProxy._db.validateLogin(username, password);
+    }
+
+    static saveLoginInfo(username, password) {
+        DBProxy._db.saveLoginInfo(username, password);
+    }
+
+    static saveData(table, username, key, value) {
+        DBProxy._db.saveData(table, username, key, value);
     }
 }
 
