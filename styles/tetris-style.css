@@ -5,6 +5,8 @@ html, body {
 
 body {
     background: black;
+    color: white;
+    font-family: Andale Mono, monospace;
     display: flex;
     align-items: center;
     justify-content: center;

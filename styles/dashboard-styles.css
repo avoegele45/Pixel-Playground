@@ -1,0 +1,21 @@
+body {
+    height: 100%;
+    font-family: Andale Mono, monospace;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: black;  
+    background-image: url("../assets/images/updated-background.jpg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button{
+    font-family: Andale Mono, monospace;
+}
+
+table{
+    color: white;
+}
