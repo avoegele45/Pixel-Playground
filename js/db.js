@@ -1,6 +1,6 @@
 export class DBProxy {
 
-    static _db = MockDB;
+    static _db = CookieDB;
 
     static validateLogin(username, password) {
         return DBProxy._db.validateLogin(username, password);
@@ -15,9 +15,17 @@ export class DBProxy {
     }
 }
 
-class MockDB {
+class CookieDB {
     static validateLogin(username, password) {
         return true;
+    }
+
+    static saveLoginInfo(username, password) {
+
+    }
+
+    static saveData(table, username, key, value) {
+        
     }
 }
 
