@@ -17,7 +17,13 @@ export class CookieManager {
     static getCookieObject() {
         let cookie = {}
 
-        let kvStrings = document.cookie.split(";");
+        let cookieString = document.cookie;
+
+        if (cookieString == null || cookieString == "") {
+            return null
+        }
+
+        let kvStrings = cookieString.split(";");
         
         kvStrings.forEach(kvString => {
             let splits = kvString.split("=");
