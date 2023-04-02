@@ -13,7 +13,7 @@ class HighScoreSaver {
     }
 
     get() {
-        let username = DBProxy.getLoginInfo.username;
+        let username = DBProxy.getLoginInfo().username;
 
         return DBProxy.getData(this.tableName, username, this.keyName);
     }
