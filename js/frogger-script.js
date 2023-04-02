@@ -6,7 +6,7 @@ const context = canvas.getContext('2d');
 let savedScore = Savers.Frogger.get();
 let highScore = savedScore ? savedScore : 0;
 
-let score = savedScore ? savedScore : 0;
+let score = 0;
 const grid = 48;
 const gridGap = 10;
 

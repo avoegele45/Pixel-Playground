@@ -8,7 +8,7 @@ import { Savers } from "./user-savers.js";
 let savedScore = Savers.Tetris.get();
 let highScore = savedScore ? savedScore : 0;
 
-let score = savedScore ? savedScore : 0
+let score = 0;
 document.getElementById("scoreboard").innerHTML = score;
 
 function getRandomInt(min, max) {

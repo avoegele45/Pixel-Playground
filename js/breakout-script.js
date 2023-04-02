@@ -6,7 +6,7 @@ const context = canvas.getContext('2d');
 let savedScore = Savers.Breakout.get();
 let highScore = savedScore ? savedScore : 0;
 
-let score = savedScore ? savedScore : 0;
+let score = 0;
 document.getElementById("scoreboard").innerHTML = score;
 
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
