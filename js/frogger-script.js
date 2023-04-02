@@ -3,7 +3,9 @@ import { Savers } from "./user-savers.js";
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
-let score = 0;
+let savedScore = Savers.Frogger.get();
+
+let score = savedScore ? savedScore : 0;
 const grid = 48;
 const gridGap = 10;
 

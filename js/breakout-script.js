@@ -3,7 +3,9 @@ import { Savers } from "./user-savers";
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
-let score = 0;
+let savedScore = Savers.Breakout.get();
+
+let score = savedScore ? savedScore : 0;
 document.getElementById("scoreboard").innerHTML = score;
 
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
