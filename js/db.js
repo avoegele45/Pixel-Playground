@@ -20,6 +20,10 @@ class CookieDB {
     static getLoginInfo() {
         let cookie = CookieManager.getCookieObject();
 
+        if (cookie == null) {
+            return null;
+        }
+
         let loginInfo = {
             username: cookie["username"],
             password: cookie["password"]
