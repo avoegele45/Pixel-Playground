@@ -1,4 +1,4 @@
-import { Savers } from "./user-savers";
+import { Savers } from "./user-savers.js";
 
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
