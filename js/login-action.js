@@ -8,7 +8,7 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    LoginController.login(username, password)
+    LoginController.login(username, password);
 
-    location.href = 'dashboard.html';
+    window.location.href = 'dashboard.html';
 })
