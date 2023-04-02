@@ -163,7 +163,7 @@ function loop() {
       //increase score
       score++;
       document.getElementById("scoreboard").innerHTML = score;
-      
+    
       // remove brick from the bricks array
       bricks.splice(i, 1);
 
@@ -206,7 +206,7 @@ function loop() {
 
   if (score != previousScore) {
     Savers.Breakout.save(score);
-    score = previousScore;
+    previousScore = score;
   }
 }
 
