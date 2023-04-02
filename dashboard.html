@@ -6,18 +6,29 @@
 </head>
 <body>
   <h1 >Pixel<br> Playground</h1>
-  <table>
-    <tr>
-      <th id="left"><button class="push--skeuo" id="Frogger-btn" onclick= "window.location.href = 'frogger.html'">FROGGER</button></th>
-      <th><button class="push--skeuo" id="Tetris-btn" onclick= "window.location.href = 'tetris.html'">TETRIS</button></th>
-      <th id="right"><button class="push--skeuo" id="Breakout-btn" onclick= "window.location.href = 'breakout.html'">BREAKOUT</button></th>
-    </tr>
-    <tr>
+<table>
+  <tr>
+    <th id="left"><img src="assets/images/frogger-image.png" alt="Frogger Gameplay" style="width:300px;height:300px;">
+    <a href="frogger-info.html"><img src="assets/images/info-icon.png" style="width:80px;height:80px;"></a></th>
+    <th><img src="assets/images/tetris-image.png" alt="Tetris Gameplay" style="width:300px;height:300px;">
+    <a href="tetris-info.html"><img src="assets/images/info-icon.png" style="width:80px;height:80px;"></a></th>
+    <th id="right"><img src="assets/images/breakout-image.png" alt="Breakout Gameplay" style="width:300px;height:300px;">
+    <a href="breakout-info.html"><img src="assets/images/info-icon.png" style="width:80px;height:80px;"></a></th>
+
+  </tr>
+  <tr>
+    <th id="left"><button class="push--skeuo" id="Frogger-btn" onclick= "window.location.href = 'frogger.html'">FROGGER</button></th>
+    <th><button class="push--skeuo" id="Tetris-btn" onclick= "window.location.href = 'tetris.html'">TETRIS</button></th>
+    <th id="right"><button class="push--skeuo" id="Breakout-btn" onclick= "window.location.href = 'breakout.html'">BREAKOUT</button></th>
+  </tr>
+  <tr>
       <th id="scores_left">Top Score: <span id="Frogger_score"></span></td>
       <th id="scores_center">Top Score: <span id="Tetris_score"></span></th>
       <th id="scores_right">Top Score: <span id="Breakout_score"></span></th>
     </tr>
-  </table>
-  <script src="js/dashboard-scripts.js"></script>
+</table>
+
+  
+<script src="js/db.js"></script>
 </body>
 </html>
