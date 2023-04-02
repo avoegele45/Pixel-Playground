@@ -22,14 +22,26 @@ div {
 }
 
 h1 {
-    font-size: 70px;
-    color:rgb(0, 188, 6);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: white;
+    font-family: BarcadeNoBar;
+    color: grey;
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
+    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
 }
 
 button.home {
     background-color: rgb(255, 36, 179);
     font-family: Andale Mono, monospace;
     font-size: 50px;
-  }
+}
+
+@font-face{
+    font-family: BarcadeNoBar;
+    src: url(BarcadeNoBar.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+#newfont{
+    font-family: BarcadeNoBar;
+}
