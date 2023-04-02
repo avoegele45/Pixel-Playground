@@ -6,7 +6,7 @@
 import { Savers } from "./user-savers.js";
 
 let savedScore = Savers.Tetris.get();
-let highScore = savedScore;
+let highScore = savedScore ? savedScore : 0;
 
 let score = savedScore ? savedScore : 0
 document.getElementById("scoreboard").innerHTML = score;
