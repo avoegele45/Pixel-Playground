@@ -11,3 +11,9 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+button.home {
+    background-color: rgb(255, 36, 179);
+    font-family: Andale Mono, monospace;
+    font-size: 50px;
+  }
