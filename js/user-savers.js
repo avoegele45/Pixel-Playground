@@ -34,5 +34,21 @@ export class FroggerSaver {
 
         return DBProxy.getData(FroggerSaver.tableName, username, FroggerSaver.keyName);
     }
+}
 
+export class BreakoutSaver {
+    static tableName = "breakout";
+    static keyName = "high-score";
+
+    static save(score) {
+        let username = DBProxy.getLoginInfo().username;
+
+        DBProxy.saveData(BreakoutSaver.tableName, username, BreakoutSaver.keyName, score);
+    }
+
+    static get() {
+        let username = DBProxy.getLoginInfo().username;
+
+        return DBProxy.getData(BreakoutSaver.tableName, username, BreakoutSaver.keyName);
+    }
 }
