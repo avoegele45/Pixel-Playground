@@ -17,6 +17,16 @@ class CookieDB {
         CookieManager.setCookieKey("password", password);
     }
 
+    static getLoginInfo() {
+        let cookie = CookieManager.getCookieObject()
+        let loginInfo = {
+            username: cookie[username],
+            password: cookie[password]
+        }
+
+        return loginInfo
+    }
+
     static saveData(table, username, key, value) {
         let fullKey = CookieDB._createFullKey(table, username, key);
         CookieManager.setCookieKey(fullKey, value);
@@ -41,8 +51,16 @@ export class DBProxy {
         DBProxy._db.saveLoginInfo(username, password);
     }
 
+    static getLoginInfo() {
+        return DBProxy._db.getLoginInfo();
+    }
+
     static saveData(table, username, key, value) {
         DBProxy._db.saveData(table, username, key, value);
+    }
+
+    static getData(table, username, key) {
+        return DBProxy._db.getData(table, username, key);
     }
 }
 
