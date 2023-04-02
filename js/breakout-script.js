@@ -4,6 +4,7 @@ const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
 let savedScore = Savers.Breakout.get();
+let highScore = savedScore
 
 let score = savedScore ? savedScore : 0;
 document.getElementById("scoreboard").innerHTML = score;
@@ -205,7 +206,11 @@ function loop() {
   context.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
 
   if (score != previousScore) {
-    Savers.Breakout.save(score);
+    if (score > highScore) {
+      highScore = score
+      Savers.Breakout.save(score);
+    }
+    
     previousScore = score;
   }
 }

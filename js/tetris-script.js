@@ -6,6 +6,7 @@
 import { Savers } from "./user-savers.js";
 
 let savedScore = Savers.Tetris.get();
+let highScore = savedScore;
 
 let score = savedScore ? savedScore : 0
 document.getElementById("scoreboard").innerHTML = score;
@@ -261,7 +262,11 @@ function loop() {
   }
 
   if (score != previousScore) {
-    Savers.Tetris.save(score);
+    if (score > highScore) {
+      highScore = score;
+      Savers.Tetris.save(score);
+    }
+    
     previousScore = score;
   }
 }

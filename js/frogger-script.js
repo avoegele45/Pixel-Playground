@@ -4,6 +4,7 @@ const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
 let savedScore = Savers.Frogger.get();
+let highScore = savedScore;
 
 let score = savedScore ? savedScore : 0;
 const grid = 48;
@@ -329,7 +330,11 @@ function loop() {
   }
 
   if (score != previousScore) {
-    Savers.Frogger.save(score);
+    if (score > highScore) {
+      highScore = score;
+      Savers.Frogger.save(score);
+    }
+
     previousScore = score;
   }
 
