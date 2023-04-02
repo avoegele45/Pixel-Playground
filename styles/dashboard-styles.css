@@ -11,11 +11,35 @@ body {
 
 table{
     color: white;
-    padding-top: 300px;
+    padding-top: 0px;
 }
 th{
     position: relative;
 }
+#scores_left{
+    padding-right: 250px;
+    font-family: BarcadeNoBar; 
+    font-size: 20px;
+    color: dimgray;
+    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
+    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
+}
+#scores_right{
+    padding-left: 250px;
+    font-family: BarcadeNoBar; 
+    font-size: 20px;
+    color: dimgray;
+    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
+    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
+}
+#scores_center{
+    font-family: BarcadeNoBar; 
+    font-size: 20px;
+    color: dimgray;
+    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
+    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
+}
+
 #left{
     padding-right: 250px;
 }
