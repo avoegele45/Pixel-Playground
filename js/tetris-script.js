@@ -3,6 +3,8 @@
 // get a random integer between the range of [min,max]
 // @see https://stackoverflow.com/a/1527820/2124254
 
+import { TetrisSaver } from "./user-savers.js";
+
 let score = 0;
 document.getElementById("scoreboard").innerHTML = score;
 
@@ -208,6 +210,8 @@ let tetromino = getNextTetromino();
 let rAF = null;  // keep track of the animation frame so we can cancel it
 let gameOver = false;
 
+let previousScore = score;
+
 // game loop
 function loop() {
   rAF = requestAnimationFrame(loop);
@@ -252,6 +256,11 @@ function loop() {
         }
       }
     }
+  }
+
+  if (score != previousScore) {
+    TetrisSaver.save(score);
+    previousScore = score;
   }
 }
 
