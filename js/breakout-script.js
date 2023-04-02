@@ -1,7 +1,12 @@
+import { Savers } from "./user-savers.js";
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
-let score = 0;
+let savedScore = Savers.Breakout.get();
+let highScore = savedScore
+
+let score = savedScore ? savedScore : 0;
 document.getElementById("scoreboard").innerHTML = score;
 
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
@@ -92,6 +97,8 @@ function collides(obj1, obj2) {
          obj1.y + obj1.height > obj2.y;
 }
 
+let previousScore = score;
+
 // game loop
 function loop() {
   requestAnimationFrame(loop);
@@ -157,7 +164,7 @@ function loop() {
       //increase score
       score++;
       document.getElementById("scoreboard").innerHTML = score;
-      
+    
       // remove brick from the bricks array
       bricks.splice(i, 1);
 
@@ -197,6 +204,15 @@ function loop() {
   // draw paddle
   context.fillStyle = 'cyan';
   context.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+
+  if (score != previousScore) {
+    if (score > highScore) {
+      highScore = score
+      Savers.Breakout.save(score);
+    }
+    
+    previousScore = score;
+  }
 }
 
 // listen to keyboard events to move the paddle

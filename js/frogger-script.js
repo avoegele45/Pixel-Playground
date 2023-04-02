@@ -1,7 +1,12 @@
+import { Savers } from "./user-savers.js";
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
-let score = 0;
+let savedScore = Savers.Frogger.get();
+let highScore = savedScore;
+
+let score = savedScore ? savedScore : 0;
 const grid = 48;
 const gridGap = 10;
 
@@ -187,6 +192,8 @@ for (let i = 0; i < patterns.length; i++) {
   }
 }
 
+let previousScore = score;
+
 // game loop
 function loop() {
   requestAnimationFrame(loop);
@@ -320,6 +327,15 @@ function loop() {
       frogger.x = grid * 6;
       frogger.y = grid * 13;
     }
+  }
+
+  if (score != previousScore) {
+    if (score > highScore) {
+      highScore = score;
+      Savers.Frogger.save(score);
+    }
+
+    previousScore = score;
   }
 
 }
