@@ -1,3 +1,5 @@
+import { FroggerSaver } from "./user-savers.js";
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
@@ -187,6 +189,8 @@ for (let i = 0; i < patterns.length; i++) {
   }
 }
 
+let previousScore = score;
+
 // game loop
 function loop() {
   requestAnimationFrame(loop);
@@ -320,6 +324,11 @@ function loop() {
       frogger.x = grid * 6;
       frogger.y = grid * 13;
     }
+  }
+
+  if (score != previousScore) {
+    FroggerSaver.save(score);
+    previousScore = score;
   }
 
 }
