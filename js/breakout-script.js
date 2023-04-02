@@ -1,3 +1,5 @@
+import { Savers } from "./user-savers";
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
@@ -91,6 +93,8 @@ function collides(obj1, obj2) {
          obj1.y < obj2.y + obj2.height &&
          obj1.y + obj1.height > obj2.y;
 }
+
+let previousScore = score;
 
 // game loop
 function loop() {
@@ -197,6 +201,11 @@ function loop() {
   // draw paddle
   context.fillStyle = 'cyan';
   context.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+
+  if (score != previousScore) {
+    Savers.Breakout.save(score);
+    score = previousScore;
+  }
 }
 
 // listen to keyboard events to move the paddle

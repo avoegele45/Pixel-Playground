@@ -3,7 +3,7 @@
 // get a random integer between the range of [min,max]
 // @see https://stackoverflow.com/a/1527820/2124254
 
-import { TetrisSaver } from "./user-savers.js";
+import { Savers } from "./user-savers.js";
 
 let score = 0;
 document.getElementById("scoreboard").innerHTML = score;
@@ -259,7 +259,7 @@ function loop() {
   }
 
   if (score != previousScore) {
-    TetrisSaver.save(score);
+    Savers.Tetris.save(score);
     previousScore = score;
   }
 }

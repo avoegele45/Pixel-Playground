@@ -1,54 +1,26 @@
 import { DBProxy } from "./db.js";
 
-export class TetrisSaver {
-
-    static tableName = "tetris";
-    static keyName = "high-score";
-
-    static save(score) {
-        let username = DBProxy.getLoginInfo().username;
-        
-        DBProxy.saveData(TetrisSaver.tableName, username, TetrisSaver.keyName, score);
+class HighScoreSaver {
+    constructor(tableName) {
+        this.tableName = tableName;
+        this.keyName = "high-score"
     }
 
-    static get() {
+    save(score) {
         let username = DBProxy.getLoginInfo().username;
 
-        return DBProxy.getData(TetrisSaver.tableName, username, TetrisSaver.keyName);
-    }
-}
-
-export class FroggerSaver {
-
-    static tableName = "frogger";
-    static keyName = "high-score";
-
-    static save(score) {
-        let username = DBProxy.getLoginInfo().username;
-
-        DBProxy.saveData(FroggerSaver.tableName, username, FroggerSaver.keyName, score);
+        DBProxy.saveData(this.tableName, username, this.keyName, score);
     }
 
-    static get() {
-        let username = DBProxy.getLoginInfo().username;
+    get() {
+        let username = DBProxy.getLoginInfo.username;
 
-        return DBProxy.getData(FroggerSaver.tableName, username, FroggerSaver.keyName);
+        return DBProxy.getData(this.tableName, username, this.keyName);
     }
 }
 
-export class BreakoutSaver {
-    static tableName = "breakout";
-    static keyName = "high-score";
-
-    static save(score) {
-        let username = DBProxy.getLoginInfo().username;
-
-        DBProxy.saveData(BreakoutSaver.tableName, username, BreakoutSaver.keyName, score);
-    }
-
-    static get() {
-        let username = DBProxy.getLoginInfo().username;
-
-        return DBProxy.getData(BreakoutSaver.tableName, username, BreakoutSaver.keyName);
-    }
+export class Savers {
+    static Tetris = new HighScoreSaver("tetris");
+    static Frogger = new HighScoreSaver("frogger");
+    static Breakout = new HighScoreSaver("breakout");
 }

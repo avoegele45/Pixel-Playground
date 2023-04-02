@@ -1,4 +1,4 @@
-import { FroggerSaver } from "./user-savers.js";
+import { Savers } from "./user-savers.js";
 
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
@@ -327,7 +327,7 @@ function loop() {
   }
 
   if (score != previousScore) {
-    FroggerSaver.save(score);
+    Savers.Frogger.save(score);
     previousScore = score;
   }
 
