@@ -24,32 +24,8 @@ document.getElementById("Tetris_score").innerHTML = Tscore;
 document.getElementById("Breakout_score").innerHTML = Bscore;
 
 import { Mute } from "./audio-script.js";
-
-let audioSettings = document.getElementById("audio");
 let mutebutton = document.getElementById("mute-button");
-let usersettings = "";
 
-window.addEventListener('load', (e)=> {
-    if (Mute.userAudio.get() == "true"){
-        audioSettings.mute = true;
-    }
-    else{
-        audioSettings.play();
-    }
-});
-
-mutebutton.addEventListener("click", (e) => {
-    if (audioSettings.muted === false) {
-        audioSettings.muted = true;
-        usersettings = "true";
-        mutebutton.innerHTML = "Play";
-    }
-    else{
-        audioSettings.muted = false;
-        usersettings = "false";
-        mutebutton.innerHTML = "Mute";
-        audioSettings.play();
-    }
-    Mute.userAudio.save(usersettings);
-})
+Mute.userAudio.loadAudioSettings(mutebutton);
+Mute.userAudio.toggleMute(mutebutton);
 
