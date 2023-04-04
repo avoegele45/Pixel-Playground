@@ -1,0 +1,47 @@
+body {
+    height: 100%;
+    font-family: Andale Mono, monospace;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    background-color: lightgray;  
+    background-image: url("../assets/images/updated-background.jpg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div {
+    width: 300px;
+    background-color: rgb(255, 253, 111);
+    color: black;
+    padding: 50px;
+    margin: 20px;
+}
+
+h1 {
+    font-family: BarcadeNoBar;
+    color: grey;
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
+    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
+}
+
+button.home {
+    background-color: rgb(255, 36, 179);
+    font-family: Andale Mono, monospace;
+    font-size: 50px;
+}
+
+@font-face{
+    font-family: BarcadeNoBar;
+    src: url(BarcadeNoBar.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+#newfont{
+    font-family: BarcadeNoBar;
+}
