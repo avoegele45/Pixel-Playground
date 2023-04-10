@@ -19,8 +19,42 @@ class HighScoreSaver {
     }
 }
 
+class TetrisSaver {
+
+    static save(score, playfield) {
+
+    }
+
+    static get() {
+        
+    }
+
+}
+
+class BreakoutSaver {
+
+    static save(score, playfield) {
+
+    }
+
+    static get() {
+
+    }
+
+}
+
+class MatrixEncoder {
+    static encode(matrix) {
+
+    }
+}
+
+class MatrixDecoder {
+    static decode(len, width) {
+        
+    }
+}
+
 export class Savers {
-    static Tetris = new HighScoreSaver("tetris");
     static Frogger = new HighScoreSaver("frogger");
-    static Breakout = new HighScoreSaver("breakout");
 }
