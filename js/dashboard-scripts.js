@@ -1,4 +1,5 @@
 import { DBProxy } from "./db.js"
+import { Savers, TetrisSaver } from "./user-savers.js";
 
 let userInfo = DBProxy.getLoginInfo();
 
@@ -8,12 +9,10 @@ if (userInfo == null) {
     console.log("Not signed in.");
 }
 
-import { Savers } from "./user-savers.js";
-
 let BsavedScore = Savers.Breakout.get();
 let Bscore = BsavedScore ? BsavedScore: 0;
 
-let TsavedScore = Savers.Tetris.get();
+let TsavedScore = TetrisSaver.get();
 let Tscore = TsavedScore ? TsavedScore: 0;
 
 let FsavedScore = Savers.Frogger.get();
@@ -23,14 +22,12 @@ document.getElementById("Frogger_score").innerHTML = Fscore;
 document.getElementById("Tetris_score").innerHTML = Tscore;
 document.getElementById("Breakout_score").innerHTML = Bscore;
 
-import { Mute } from "./audio-script.js";
-
 let audioSettings = document.getElementById("audio");
 let mutebutton = document.getElementById("mute-button");
 let usersettings = "";
 
 window.addEventListener('load', (e)=> {
-    if (Mute.userAudio.get() == "true"){
+    if (Savers.UserAudio.get() == "true"){
         audioSettings.mute = true;
     }
     else{
@@ -50,6 +47,6 @@ mutebutton.addEventListener("click", (e) => {
         mutebutton.innerHTML = "Mute";
         audioSettings.play();
     }
-    Mute.userAudio.save(usersettings);
+    Savers.UserAudio.save(usersettings);
 })
 
