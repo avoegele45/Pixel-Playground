@@ -92,6 +92,27 @@ class BreakoutSaver {
 
 }
 
+class AudioSettingsSaver {
+    constructor(tableName) {
+        this.tableName = tableName;
+        this.keyName = "audio"
+    }
+    
+    
+    save(audioSettings) {
+        let username = DBProxy.getLoginInfo().username;
+
+        DBProxy.saveData(this.tableName, username, this.keyName, audioSettings);
+    }
+
+    get() {
+        let username = DBProxy.getLoginInfo().username;
+
+        return DBProxy.getData(this.tableName, username, this.keyName);
+    }
+
+}
+
 class MatrixEncoder {
     static encode(matrix) {
         let encodedString = "";
@@ -145,4 +166,5 @@ class MatrixDecoder {
 export class Savers {
     static Frogger = new HighScoreSaver("frogger");
     static Breakout = new HighScoreSaver("breakout");
+    static UserAudio = new AudioSettingsSaver("mute-settings");
 }
