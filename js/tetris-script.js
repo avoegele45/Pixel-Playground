@@ -3,9 +3,16 @@
 // get a random integer between the range of [min,max]
 // @see https://stackoverflow.com/a/1527820/2124254
 
-import { Savers } from "./user-savers.js";
+import { TetrisSaver } from "./user-savers.js";
 
-let savedScore = Savers.Tetris.get();
+let rowCount = 20;
+let colCount = 10;
+
+let savedData = TetrisSaver.getAll(rowCount, colCount);
+
+let savedScore = savedData.score;
+let savedPlayfield = savedData.playfield;
+
 let highScore = savedScore ? savedScore : 0;
 
 let score = 0;
@@ -117,6 +124,7 @@ function placeTetromino() {
     }
   }
 
+  TetrisSaver.savePlayfield(playfield);
   tetromino = getNextTetromino();
 }
 
@@ -137,8 +145,6 @@ function showGameOver() {
   context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
 }
 
-
-
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 const grid = 32;
@@ -146,16 +152,24 @@ const tetrominoSequence = [];
 
 // keep track of what is in every cell of the game using a 2d array
 // tetris playfield is 10x20, with a few rows offscreen
-const playfield = [];
+let playfield = [];
 
-// populate the empty state
-for (let row = -2; row < 20; row++) {
-  playfield[row] = [];
+console.log(savedPlayfield);
 
-  for (let col = 0; col < 10; col++) {
-    playfield[row][col] = 0;
+if (savedPlayfield === null || savedPlayfield === [] || savedPlayfield.length === 0) {
+  // populate the empty state
+  for (let row = -2; row < rowCount; row++) {
+    playfield[row] = [];
+
+    for (let col = 0; col < colCount; col++) {
+      playfield[row][col] = 0;
+    }
   }
+} else {
+  playfield = savedPlayfield;
 }
+
+
 
 // how to draw each tetromino
 // @see https://tetris.fandom.com/wiki/SRS
@@ -264,7 +278,7 @@ function loop() {
   if (score != previousScore) {
     if (score > highScore) {
       highScore = score;
-      Savers.Tetris.save(score);
+      TetrisSaver.saveAll(score, playfield);
     }
     
     previousScore = score;
