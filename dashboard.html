@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles/frog-theme-style.css">
+  <link rel="stylesheet" href="styles/dashboard-styles.css">
   <link rel="stylesheet" href="styles/button.css">
   <audio id = "audio" loop>
     <source src="assets/sounds/Hours Of Fun-8-Bit Arcade.mp3" type="audio/mpeg">
@@ -14,6 +14,11 @@
   <h1 >Pixel<br> Playground</h1>
 <table>
   <tr>
+    <th id="scores_left">Top Score: <span id="Frogger_score"></span></td>
+    <th id="scores_center">Top Score: <span id="Tetris_score"></span></th>
+    <th id="scores_right">Top Score: <span id="Breakout_score"></span></th>
+</tr>
+  <tr>
     <th id="left"><img src="assets/images/frogger-image.png" alt="Frogger Gameplay" style="width:300px;height:300px;">
     <a href="frogger-info.html"><img src="assets/images/info-icon.png" style="width:80px;height:80px;"></a></th>
     <th><img src="assets/images/tetris-image.png" alt="Tetris Gameplay" style="width:300px;height:300px;">
@@ -25,11 +30,6 @@
     <th id="left"><button class="push--skeuo" id="Frogger-btn" onclick= "window.location.href = 'frogger.html'">FROGGER</button></th>
     <th><button class="push--skeuo" id="Tetris-btn" onclick= "window.location.href = 'tetris.html'">TETRIS</button></th>
     <th id="right"><button class="push--skeuo" id="Breakout-btn" onclick= "window.location.href = 'breakout.html'">BREAKOUT</button></th>
-  </tr>
-  <tr>
-      <th id="scores_left">Top Score: <span id="Frogger_score"></span></td>
-      <th id="scores_center">Top Score: <span id="Tetris_score"></span></th>
-      <th id="scores_right">Top Score: <span id="Breakout_score"></span></th>
   </tr>
 </table>
   

@@ -15,7 +15,7 @@ body {
 
 div {
     width: 300px;
-    background-color: rgb(255, 253, 111);
+    background-color: rgb(247, 188, 115);
     color: black;
     padding: 50px;
     margin: 20px;
@@ -23,11 +23,11 @@ div {
 
 h1 {
     font-family: BarcadeNoBar;
-    color: grey;
+    color: rgb(255, 74, 222);
     text-align: center;
     font-size: 100px;
-    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
-    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
+    text-shadow: 2px 0 rgb(255, 255, 255), -2px 0 rgb(255, 255, 255), 0 3px rgb(189, 0, 155), 0 -3px rgb(189, 0, 155),
+    1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
 }
 
 button.home {
