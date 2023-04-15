@@ -11,7 +11,11 @@ body {
 
 table{
     color: white;
-    padding-top: 0px;
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    background-color: rgb(9, 5, 24);
 }
 th{
     position: relative;
@@ -20,24 +24,24 @@ th{
     padding-right: 250px;
     font-family: BarcadeNoBar; 
     font-size: 20px;
-    color: dimgray;
-    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
-    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
+    color: rgb(255, 74, 222);
+    text-shadow: .5px 0 rgb(255, 255, 255), -.5px 0 rgb(255, 255, 255), 0 .5px rgb(189, 0, 155), 0 -.5px rgb(189, 0, 155),
+    1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
 }
 #scores_right{
     padding-left: 250px;
     font-family: BarcadeNoBar; 
     font-size: 20px;
-    color: dimgray;
-    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
-    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
+    color: rgb(255, 74, 222);
+    text-shadow: .5px 0 rgb(255, 255, 255), -.5px 0 rgb(255, 255, 255), 0 .5px rgb(189, 0, 155), 0 -.5px rgb(189, 0, 155),
+    1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
 }
 #scores_center{
     font-family: BarcadeNoBar; 
     font-size: 20px;
-    color: dimgray;
-    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
-    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
+    color: rgb(255, 74, 222);
+    text-shadow: .5px 0 rgb(255, 255, 255), -.5px 0 rgb(255, 255, 255), 0 .5px rgb(189, 0, 155), 0 -.5px rgb(189, 0, 155),
+    1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
 }
 
 #left{
@@ -59,10 +63,10 @@ th{
 
 h1{
     font-family: BarcadeNoBar;
-    color: grey;
+    color: rgb(255, 74, 222);
     text-align: center;
     font-size: 100px;
-    text-shadow: 2px 0 lawngreen, -2px 0 lawngreen, 0 2px lawngreen, 0 -2px lawngreen,
-    1px 1px lawngreen, -1px -1px lawngreen, 1px -1px lawngreen, -1px 1px lawngreen;
+    text-shadow: 2px 0 rgb(255, 255, 255), -2px 0 rgb(255, 255, 255), 0 3px rgb(189, 0, 155), 0 -3px rgb(189, 0, 155),
+    1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
     
 }
