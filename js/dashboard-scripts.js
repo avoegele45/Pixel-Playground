@@ -29,3 +29,12 @@ let mutebutton = document.getElementById("mute-button");
 Mute.userAudio.loadAudioSettings(mutebutton);
 Mute.userAudio.toggleMute(mutebutton);
 
+// Changing and managing dashboard themes:
+const themeRadios = document.querySelectorAll('input[name="theme"]');
+
+themeRadios.forEach(radio => {
+  radio.addEventListener('change', function() {
+    const link = document.querySelector('link[rel="stylesheet"]');
+    link.href = this.value + '.css';
+  });
+});

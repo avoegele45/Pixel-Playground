@@ -10,7 +10,7 @@
     <button id="mute-button">Mute</button>
   </div>
 </head>
-<body>
+<body onload="set_style_from_cookie()">
   <h1 >Pixel<br> Playground</h1>
 <table>
   <tr>
@@ -32,7 +32,17 @@
     <th id="right"><button class="push--skeuo" id="Breakout-btn" onclick= "window.location.href = 'breakout.html'">BREAKOUT</button></th>
   </tr>
 </table>
-  
+
+<div id="option_list">
+  <h1 id="themehead">Themes:</h1>
+  <label id="themeopt"><input type="radio" name="theme" value="styles/dashboard-styles" checked>Default  </label>
+  <label id="themeopt"><input type="radio" name="theme" value="styles/retro-lightmode-style">Standard Light  </label>
+  <label id="themeopt"><input type="radio" name="theme" value="styles/frog-theme-style">Frog  </label>
+  <label id="themeopt"><input type="radio" name="theme" value="styles/tron-theme-style">Tron  </label>
+
+</div>
+
 <script type="module" src="js/dashboard-scripts.js"></script>
+
 </body>
 </html>

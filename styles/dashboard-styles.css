@@ -70,3 +70,19 @@ h1{
     1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
     
 }
+
+#themehead {
+    text-align: center;
+    font-family: BarcadeNoBar; 
+    font-size: 50px;
+    color: rgb(255, 74, 222);
+    text-shadow: .5px 0 rgb(255, 255, 255), -.5px 0 rgb(255, 255, 255), 0 .5px rgb(189, 0, 155), 0 -.5px rgb(189, 0, 155),
+    1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+}
+
+#themeopt {
+    font-family: Andale Mono, monospace;
+    font-size: 30px;
+    color: rgb(255, 74, 222);
+    background-color: rgb(9, 5, 24);
+}
