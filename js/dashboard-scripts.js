@@ -41,19 +41,23 @@ if (Savers.Theme.get() != null) {
 standardBtn.addEventListener('click', function() {
   link.href = 'styles/dashboard-styles.css';
   Savers.Theme.save('styles/dashboard-styles.css');
+  Savers.InfoTheme.save('styles/info.css');
 });
 
 lightBtn.addEventListener('click', function() {
   link.href = 'styles/retro-lightmode-style.css';
   Savers.Theme.save('styles/retro-lightmode-style.css');
+  Savers.InfoTheme.save('styles/info-light.css');
 });
 
 frogBtn.addEventListener('click', function() {
   link.href = 'styles/frog-theme-style.css';
   Savers.Theme.save('styles/frog-theme-style.css');
+  Savers.InfoTheme.save('styles/info-frog.css');
 });
 
 tronBtn.addEventListener('click', function() {
   link.href = 'styles/tron-theme-style.css';
   Savers.Theme.save('styles/tron-theme-style.css');
+  Savers.InfoTheme.save('styles/info-tron.css');
 });

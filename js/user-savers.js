@@ -206,7 +206,9 @@ class MatrixDecoder {
 export class Savers {
     static Frogger = new HighScoreSaver("frogger");
     static Breakout = new HighScoreSaver("breakout");
+    static Tetris = new HighScoreSaver("tetris");
     static Theme = new ThemeSaver("themes");
+    static InfoTheme = new ThemeSaver("infotheme");
     static UserAudio = new AudioSettingsSaver("mute-settings");
 }
 
