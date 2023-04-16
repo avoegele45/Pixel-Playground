@@ -22,11 +22,10 @@ document.getElementById("Frogger_score").innerHTML = Fscore;
 document.getElementById("Tetris_score").innerHTML = Tscore;
 document.getElementById("Breakout_score").innerHTML = Bscore;
 
-import { Mute } from "./audio-script.js";
 let mutebutton = document.getElementById("mute-button");
 
-Mute.userAudio.loadAudioSettings(mutebutton);
-Mute.userAudio.toggleMute(mutebutton);
+Savers.UserAudio.loadAudioSettings(mutebutton);
+Savers.UserAudio.toggleMute(mutebutton);
 
 // Changing and managing dashboard themes:
 const themeRadios = document.querySelectorAll('input[name="theme"]');
