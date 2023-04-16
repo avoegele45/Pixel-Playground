@@ -124,7 +124,7 @@ class AudioSettingsSaver {
         let username = DBProxy.getLoginInfo().username;
 
         DBProxy.saveData(this.tableName, username, this.keyName, audioSettings);
-
+    }
 
     loadAudioSettings(muteButton){
         window.addEventListener("load", (e)=> {
