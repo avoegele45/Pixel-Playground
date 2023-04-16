@@ -1,0 +1,45 @@
+body {
+    height: 100%;
+    font-family: Andale Mono, monospace;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: white;  
+    background-image: url("../assets/images/tron-background.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+div {
+    width: 300px;
+    background-color: rgb(141, 215, 255);
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    margin: 20px;
+}
+
+h1 {
+    font-family: BarcadeNoBar;
+    color: rgb(255, 174, 0);
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 2px 0 rgb(255, 111, 0), -2px 0 rgb(255, 111, 0), 0 3px rgb(255, 140, 0), 0 -3px rgb(255, 140, 0),
+    1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
+}
+
+button.home {
+    background-color: rgb(141, 215, 255);
+    font-family: Andale Mono, monospace;
+    color: rgb(255, 174, 0);
+    font-size: 50px;
+}
+
+@font-face{
+    font-family: BarcadeNoBar;
+    src: url(BarcadeNoBar.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+#newfont{
+    font-family: BarcadeNoBar;
+}
