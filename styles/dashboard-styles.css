@@ -80,7 +80,7 @@ h1{
     1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
 }
 
-#themeopt {
+.theme {
     font-family: Andale Mono, monospace;
     font-size: 30px;
     color: rgb(255, 74, 222);

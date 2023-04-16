@@ -19,6 +19,26 @@ class HighScoreSaver {
     }
 }
 
+
+class ThemeSaver {
+    constructor(tableName) {
+        this.tableName = tableName;
+        this.keyName = "dashtheme";
+    }
+
+    save(dashtheme) {
+        let username = DBProxy.getLoginInfo().username;
+
+        DBProxy.saveData(this.tableName, username, this.keyName, dashtheme);
+    }
+
+    get() {
+        let username = DBProxy.getLoginInfo().username;
+
+        return DBProxy.getData(this.tableName, username, this.keyName);
+    }
+}
+
 export class TetrisSaver {
 
     static save(score) {
@@ -104,13 +124,7 @@ class AudioSettingsSaver {
         let username = DBProxy.getLoginInfo().username;
 
         DBProxy.saveData(this.tableName, username, this.keyName, audioSettings);
-    }
 
-    get() {
-        let username = DBProxy.getLoginInfo().username;
-
-        return DBProxy.getData(this.tableName, username, this.keyName);
-    }
 
     loadAudioSettings(muteButton){
         window.addEventListener("load", (e)=> {
@@ -192,5 +206,7 @@ class MatrixDecoder {
 export class Savers {
     static Frogger = new HighScoreSaver("frogger");
     static Breakout = new HighScoreSaver("breakout");
+    static Theme = new ThemeSaver("themes");
     static UserAudio = new AudioSettingsSaver("mute-settings");
 }
+

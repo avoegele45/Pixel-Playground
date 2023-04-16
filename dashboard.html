@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles/dashboard-styles.css">
+
   <link rel="stylesheet" href="styles/button.css">
   <audio id = "audio" loop>
     <source src="assets/sounds/Hours Of Fun-8-Bit Arcade.mp3" type="audio/mpeg">
@@ -10,7 +11,8 @@
     <button id="mute-button">Mute</button>
   </div>
 </head>
-<body onload="set_style_from_cookie()">
+
+<body>
   <h1 >Pixel<br> Playground</h1>
 <table>
   <tr>
@@ -33,13 +35,12 @@
   </tr>
 </table>
 
-<div id="option_list">
-  <h1 id="themehead">Themes:</h1>
-  <label id="themeopt"><input type="radio" name="theme" value="styles/dashboard-styles" checked>Default  </label>
-  <label id="themeopt"><input type="radio" name="theme" value="styles/retro-lightmode-style">Standard Light  </label>
-  <label id="themeopt"><input type="radio" name="theme" value="styles/frog-theme-style">Frog  </label>
-  <label id="themeopt"><input type="radio" name="theme" value="styles/tron-theme-style">Tron  </label>
-
+<h1 id="themehead">Themes:</h1>
+<div id="set0">
+  <button class="theme" id="standard">Standard Style</button>
+  <button class="theme" id="light">Standard Light Style</button>
+  <button class="theme" id="frog">Frog Style</button>
+  <button class="theme" id="tron">Tron Style</button>
 </div>
 
 <script type="module" src="js/dashboard-scripts.js"></script>

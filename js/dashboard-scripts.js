@@ -28,11 +28,32 @@ Savers.UserAudio.loadAudioSettings(mutebutton);
 Savers.UserAudio.toggleMute(mutebutton);
 
 // Changing and managing dashboard themes:
-const themeRadios = document.querySelectorAll('input[name="theme"]');
+const standardBtn = document.getElementById('standard');
+const lightBtn = document.getElementById('light');
+const frogBtn = document.getElementById('frog');
+const tronBtn = document.getElementById('tron');
+const link = document.querySelector('link[rel="stylesheet"]');
 
-themeRadios.forEach(radio => {
-  radio.addEventListener('change', function() {
-    const link = document.querySelector('link[rel="stylesheet"]');
-    link.href = this.value + '.css';
-  });
+if (Savers.Theme.get() != null) {
+  link.href = Savers.Theme.get();
+}
+
+standardBtn.addEventListener('click', function() {
+  link.href = 'styles/dashboard-styles.css';
+  Savers.Theme.save('styles/dashboard-styles.css');
+});
+
+lightBtn.addEventListener('click', function() {
+  link.href = 'styles/retro-lightmode-style.css';
+  Savers.Theme.save('styles/retro-lightmode-style.css');
+});
+
+frogBtn.addEventListener('click', function() {
+  link.href = 'styles/frog-theme-style.css';
+  Savers.Theme.save('styles/frog-theme-style.css');
+});
+
+tronBtn.addEventListener('click', function() {
+  link.href = 'styles/tron-theme-style.css';
+  Savers.Theme.save('styles/tron-theme-style.css');
 });
