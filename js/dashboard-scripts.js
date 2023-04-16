@@ -22,31 +22,18 @@ document.getElementById("Frogger_score").innerHTML = Fscore;
 document.getElementById("Tetris_score").innerHTML = Tscore;
 document.getElementById("Breakout_score").innerHTML = Bscore;
 
-let audioSettings = document.getElementById("audio");
+import { Mute } from "./audio-script.js";
 let mutebutton = document.getElementById("mute-button");
-let usersettings = "";
 
-window.addEventListener('load', (e)=> {
-    if (Savers.UserAudio.get() == "true"){
-        audioSettings.mute = true;
-    }
-    else{
-        audioSettings.play();
-    }
+Mute.userAudio.loadAudioSettings(mutebutton);
+Mute.userAudio.toggleMute(mutebutton);
+
+// Changing and managing dashboard themes:
+const themeRadios = document.querySelectorAll('input[name="theme"]');
+
+themeRadios.forEach(radio => {
+  radio.addEventListener('change', function() {
+    const link = document.querySelector('link[rel="stylesheet"]');
+    link.href = this.value + '.css';
+  });
 });
-
-mutebutton.addEventListener("click", (e) => {
-    if (audioSettings.muted === false) {
-        audioSettings.muted = true;
-        usersettings = "true";
-        mutebutton.innerHTML = "Play";
-    }
-    else{
-        audioSettings.muted = false;
-        usersettings = "false";
-        mutebutton.innerHTML = "Mute";
-        audioSettings.play();
-    }
-    Savers.UserAudio.save(usersettings);
-})
-
