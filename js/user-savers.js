@@ -209,6 +209,7 @@ export class Savers {
     static Tetris = new HighScoreSaver("tetris");
     static Theme = new ThemeSaver("themes");
     static InfoTheme = new ThemeSaver("infotheme");
+    static SettingsTheme = new ThemeSaver("settingstheme");
     static UserAudio = new AudioSettingsSaver("mute-settings");
 }
 
