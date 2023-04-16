@@ -1,4 +1,5 @@
 import { DBProxy } from "./db.js"
+import { Savers, TetrisSaver } from "./user-savers.js";
 
 let userInfo = DBProxy.getLoginInfo();
 
@@ -8,12 +9,10 @@ if (userInfo == null) {
     console.log("Not signed in.");
 }
 
-import { Savers } from "./user-savers.js";
-
 let BsavedScore = Savers.Breakout.get();
 let Bscore = BsavedScore ? BsavedScore: 0;
 
-let TsavedScore = Savers.Tetris.get();
+let TsavedScore = TetrisSaver.get();
 let Tscore = TsavedScore ? TsavedScore: 0;
 
 let FsavedScore = Savers.Frogger.get();
@@ -23,11 +22,10 @@ document.getElementById("Frogger_score").innerHTML = Fscore;
 document.getElementById("Tetris_score").innerHTML = Tscore;
 document.getElementById("Breakout_score").innerHTML = Bscore;
 
-import { Mute } from "./audio-script.js";
 let mutebutton = document.getElementById("mute-button");
 
-Mute.userAudio.loadAudioSettings(mutebutton);
-Mute.userAudio.toggleMute(mutebutton);
+Savers.UserAudio.loadAudioSettings(mutebutton);
+Savers.UserAudio.toggleMute(mutebutton);
 
 // Changing and managing dashboard themes:
 const standardBtn = document.getElementById('standard');
