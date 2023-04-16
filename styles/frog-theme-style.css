@@ -62,11 +62,12 @@ h1{
 #themehead {
     text-align: center;
     font-family: BarcadeNoBar; 
+    background-image: none;
     font-size: 50px;
     color: rgb(255, 100, 170);;
 }
 
-#themeopt {
+.theme {
     font-family: OCR A Std, monospace; 
     font-size: 30px;
     color: rgb(255, 100, 170);;
