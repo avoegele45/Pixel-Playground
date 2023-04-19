@@ -10,17 +10,29 @@ if (userInfo == null) {
 }
 
 let BsavedScore = Savers.Breakout.get();
-let Bscore = BsavedScore ? BsavedScore: 0;
+let Bscore = BsavedScore ? BsavedScore : 0;
 
 let TsavedScore = TetrisSaver.get();
-let Tscore = TsavedScore ? TsavedScore: 0;
+let Tscore = TsavedScore ? TsavedScore : 0;
 
 let FsavedScore = Savers.Frogger.get();
-let Fscore = FsavedScore ? FsavedScore: 0;
+let Fscore = FsavedScore ? FsavedScore : 0;
+
+let PSavedScore = Savers.Pong.get();
+let Pscore = PSavedScore ? PSavedScore : 0;
+
+let HSavedScore = Savers.Helicopter.get();
+let Hscore = HSavedScore ? HSavedScore : 0;
+
+let SnSavedScore = Savers.Snake.get();
+let SnScore = SnSavedScore ? SnSavedScore : 0;
 
 document.getElementById("Frogger_score").innerHTML = Fscore;
 document.getElementById("Tetris_score").innerHTML = Tscore;
 document.getElementById("Breakout_score").innerHTML = Bscore;
+document.getElementById("Pong_score").innerHTML = Pscore;
+document.getElementById("Helicopter_score").innerHTML = HSavedScore;
+document.getElementById("Snake_score").innerHTML = SnScore;
 
 let mutebutton = document.getElementById("mute-button");
 
