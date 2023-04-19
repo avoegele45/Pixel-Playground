@@ -1,3 +1,5 @@
+import { Savers } from "./user-savers.js";
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 const grid = 15;
@@ -7,9 +9,13 @@ const maxPaddleY = canvas.height - grid - paddleHeight;
 var paddleSpeed = 6;
 var ballSpeed = 5;
 
-  //adding score
-  let score = 0;
-  document.getElementById("scoreboard").innerHTML = score;
+//adding score
+let savedScore = Savers.Pong.get()
+let highScore = savedScore ? savedScore : 0
+
+let score = 0;
+document.getElementById("scoreboard").innerHTML = score;
+document.getElementById("high-scoreboard").innerHTML = highScore;
 
 const leftPaddle = {
   // start in the middle of the game on the left side
@@ -108,12 +114,19 @@ function loop() {
 
     if(ball.x < 0){
       score++;
-      document.getElementById("scoreboard").innerHTML = score;
+
+      if (score > highScore) {
+        Savers.Pong.save(score);
+        highScore = score;
+      }
+
     }
     else{
       score = 0;
-      document.getElementById("scoreboard").innerHTML = score;
     }
+
+    document.getElementById("scoreboard").innerHTML = score;
+    document.getElementById("high-scoreboard").innerHTML = highScore;
 
 
     // give some time for the player to recover before launching the ball again
