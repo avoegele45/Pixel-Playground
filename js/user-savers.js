@@ -208,6 +208,7 @@ export class Savers {
     static Breakout = new HighScoreSaver("breakout");
     static Helicopter = new HighScoreSaver("helicopter");
     static Pong = new HighScoreSaver("pong");
+    static Snake = new HighScoreSaver("snake")
     static Theme = new ThemeSaver("themes");
     static InfoTheme = new ThemeSaver("infotheme");
     static SettingsTheme = new ThemeSaver("settingstheme");

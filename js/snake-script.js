@@ -1,9 +1,13 @@
+import { Savers } from "./user-savers.js";
+
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
 
-
+let savedScore = Savers.Snake.get();
+let highScore = savedScore ? savedScore : 0;
 let score = 0;
 document.getElementById("scoreboard").innerHTML = score;
+document.getElementById("high-scoreboard").innerHTML = score;
 
 // the canvas width & height, snake x & y, and the apple x & y, all need to be a multiples of the grid size in order for collision detection to work
 // (e.g. 16 * 25 = 400)
@@ -91,6 +95,14 @@ function loop() {
       snake.maxCells++;
 
       score++;
+
+      if (score > highScore) {
+        highScore = score;
+        Savers.Snake.save(highScore);
+
+        document.getElementById("high-scoreboard").innerHTML = highScore;
+      }
+
       document.getElementById("scoreboard").innerHTML = score;
 
       // canvas is 400x400 which is 25x25 grids
