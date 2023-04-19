@@ -1,7 +1,12 @@
+import { Savers } from "./user-savers.js";
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
+let savedScore = Savers.Helicopter.get();
+let highScore = savedScore ? savedScore : 0
 let score = 0;
+document.getElementById("high-scoreboard").innerHTML = highScore;
 document.getElementById("scoreboard").innerHTML = score;
 
 const minTunnelWidth = 400;
@@ -32,6 +37,9 @@ function clamp(num, min, max) {
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+// how long until a point is added to the score
+let scoreDelay = 60
 
 const helicopter = {
   x: 200,
@@ -89,7 +97,20 @@ function loop() {
   rAF = requestAnimationFrame(loop);
   context.clearRect(0,0,canvas.width,canvas.height);
 
-  score += moveSpeed;
+  scoreDelay -= 1;
+
+  if (scoreDelay === 0) {
+    score += 1;
+
+    if (score > highScore) {
+      highScore = score;
+      Savers.Helicopter.save(highScore);
+      document.getElementById("high-scoreboard").innerHTML = highScore;
+    }
+
+    scoreDelay = 60;
+  }
+  
   document.getElementById("scoreboard").innerHTML = score;
 
   if (spacePressed) {
@@ -185,6 +206,7 @@ function loop() {
       // crashes
           score = 0;
           document.getElementById("scoreboard").innerHTML = score;
+          scoreDelay = 60;
           helicopter.y = 100;
           helicopter.dy = 0;
           helicopter.x = 200;
