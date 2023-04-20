@@ -1,5 +1,10 @@
 import { Savers } from "./user-savers.js";
 
+let mutebutton = document.getElementById("mute-button");
+
+Savers.UserAudio.loadAudioSettings(mutebutton);
+Savers.UserAudio.toggleMute(mutebutton);
+
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
 

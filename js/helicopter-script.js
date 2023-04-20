@@ -1,10 +1,15 @@
 import { Savers } from "./user-savers.js";
 
+let mutebutton = document.getElementById("mute-button");
+
+Savers.UserAudio.loadAudioSettings(mutebutton);
+Savers.UserAudio.toggleMute(mutebutton);
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
 let savedScore = Savers.Helicopter.get();
-let highScore = savedScore ? savedScore : 0
+let highScore = savedScore ? savedScore : 0;
 let score = 0;
 document.getElementById("high-scoreboard").innerHTML = highScore;
 document.getElementById("scoreboard").innerHTML = score;
