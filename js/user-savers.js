@@ -113,13 +113,20 @@ class BreakoutSaver {
 }
 
 class AudioSettingsSaver {
+    
     constructor(tableName) {
         this.tableName = tableName;
-        this.keyName = "audio"
+        this.keyName = "audio";
+        this.audioSettings = document.getElementById("audio");
     }
     
     
-    
+    get() {
+        let username = DBProxy.getLoginInfo().username;
+
+        return DBProxy.getData(this.tableName, username, this.keyName);
+    }
+
     save(audioSettings) {
         let username = DBProxy.getLoginInfo().username;
 
@@ -128,24 +135,24 @@ class AudioSettingsSaver {
 
     loadAudioSettings(muteButton){
         window.addEventListener("load", (e)=> {
-            Mute.userAudio.get() == "true" ? audioSettings.mute = true : audioSettings.play();
-            Mute.userAudio.get() == "true" ? muteButton.innerHTML = "Play" : muteButton.innerHTML = "Mute";
+            Savers.UserAudio.get() == "true" ? this.audioSettings.mute = true : this.audioSettings.play();
+            Savers.UserAudio.get() == "true" ? muteButton.innerHTML = "Play" : muteButton.innerHTML = "Mute";
         });
     }
 
     toggleMute(muteButton){
         muteButton.addEventListener("click", (e) => {
             let userSettings;
-            if (audioSettings.muted === false) {
-                audioSettings.muted = true;
+            if (this.audioSettings.muted === false) {
+                this.audioSettings.muted = true;
                 userSettings = "true";
                 muteButton.innerHTML = "Play";
             }
             else{
-                audioSettings.muted = false;
+                this.audioSettings.muted = false;
                 userSettings = "false";
                 muteButton.innerHTML = "Mute";
-                audioSettings.play();
+                this.audioSettings.play();
             }
             this.save(userSettings);
         });

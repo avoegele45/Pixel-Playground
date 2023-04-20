@@ -1,5 +1,10 @@
 import { Savers } from "./user-savers.js";
 
+let mutebutton = document.getElementById("mute-button");
+
+Savers.UserAudio.loadAudioSettings(mutebutton);
+Savers.UserAudio.toggleMute(mutebutton);
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 const grid = 15;
@@ -16,6 +21,9 @@ let highScore = savedScore ? savedScore : 0
 let score = 0;
 document.getElementById("scoreboard").innerHTML = score;
 document.getElementById("high-scoreboard").innerHTML = highScore;
+
+var paddleSpeed = 6;
+var ballSpeed = 5;
 
 const leftPaddle = {
   // start in the middle of the game on the left side
@@ -103,31 +111,10 @@ function loop() {
     ball.y = canvas.height - grid * 2;
     ball.dy *= -1;
   }
-  
-  // Left Paddle moves by itself
-  leftPaddle.dy = 3/4 *ball.dy;
-
 
   // reset ball if it goes past paddle (but only if we haven't already done so)
   if ( (ball.x < 0 || ball.x > canvas.width) && !ball.resetting) {
     ball.resetting = true;
-
-    if(ball.x < 0){
-      score++;
-
-      if (score > highScore) {
-        Savers.Pong.save(score);
-        highScore = score;
-      }
-
-    }
-    else{
-      score = 0;
-    }
-
-    document.getElementById("scoreboard").innerHTML = score;
-    document.getElementById("high-scoreboard").innerHTML = highScore;
-
 
     // give some time for the player to recover before launching the ball again
     setTimeout(() => {
@@ -169,7 +156,6 @@ function loop() {
 
 // listen to keyboard events to move the paddles
 document.addEventListener('keydown', function(e) {
-
   // up arrow key
   if (e.which === 38) {
     rightPaddle.dy = -paddleSpeed;
@@ -178,17 +164,15 @@ document.addEventListener('keydown', function(e) {
   else if (e.which === 40) {
     rightPaddle.dy = paddleSpeed;
   }
-
   // w key
-  //if (e.which === 87) {
-  // leftPaddle.dy = -paddleSpeed;
-  //}
+  if (e.which === 87) {
+    leftPaddle.dy = -paddleSpeed;
+  }
   // a key
-  //else if (e.which === 83) {
-  //  leftPaddle.dy = paddleSpeed;
-  //}
+  else if (e.which === 83) {
+    leftPaddle.dy = paddleSpeed;
+  }
 });
-
 // listen to keyboard events to stop the paddle if key is released
 document.addEventListener('keyup', function(e) {
   if (e.which === 38 || e.which === 40) {
@@ -198,8 +182,8 @@ document.addEventListener('keyup', function(e) {
   if (e.which === 83 || e.which === 87) {
     leftPaddle.dy = 0;
   }
-}                 
-);
+});
 
 // start the game
 requestAnimationFrame(loop);
+

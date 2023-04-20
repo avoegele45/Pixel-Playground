@@ -3,7 +3,12 @@
 // get a random integer between the range of [min,max]
 // @see https://stackoverflow.com/a/1527820/2124254
 
-import { TetrisSaver } from "./user-savers.js";
+import { TetrisSaver , Savers} from "./user-savers.js";
+
+let mutebutton = document.getElementById("mute-button");
+
+Savers.UserAudio.loadAudioSettings(mutebutton);
+Savers.UserAudio.toggleMute(mutebutton);
 
 let rowCount = 20;
 let colCount = 10;
