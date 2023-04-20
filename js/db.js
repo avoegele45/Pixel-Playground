@@ -67,6 +67,7 @@ export class DBProxy {
     static getData(table, username, key) {
         return DBProxy._db.getData(table, username, key);
     }
+
 }
 
 class RealDB {

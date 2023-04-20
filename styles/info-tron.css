@@ -4,34 +4,33 @@ body {
     display: grid;
     justify-items: center;
     align-items: center;
-    color: white;
-    background-color: lightgray;  
-    background-image: url("../assets/images/updated-background.jpg");
-    background-size: auto;
+    color: white;  
+    background-image: url("../assets/images/tron-background.jpeg");
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 div {
     width: 300px;
-    background-color: rgb(247, 188, 115);
-    color: black;
+    background-color: rgb(141, 215, 255);
+    color: rgb(0, 0, 0);
     padding: 50px;
     margin: 20px;
 }
 
 h1 {
     font-family: BarcadeNoBar;
-    color: rgb(255, 74, 222);
+    color: rgb(255, 174, 0);
     text-align: center;
     font-size: 100px;
-    text-shadow: 2px 0 rgb(255, 255, 255), -2px 0 rgb(255, 255, 255), 0 3px rgb(189, 0, 155), 0 -3px rgb(189, 0, 155),
+    text-shadow: 2px 0 rgb(255, 111, 0), -2px 0 rgb(255, 111, 0), 0 3px rgb(255, 140, 0), 0 -3px rgb(255, 140, 0),
     1px 1px rgb(255, 255, 255), -1px -1px rgb(255, 255, 255), 1px -1px rgb(255, 255, 255), -1px 1px rgb(255, 255, 255);
 }
 
 button.home {
-    background-color: rgb(255, 36, 179);
+    background-color: rgb(141, 215, 255);
     font-family: Andale Mono, monospace;
+    color: rgb(255, 174, 0);
     font-size: 50px;
 }
 
