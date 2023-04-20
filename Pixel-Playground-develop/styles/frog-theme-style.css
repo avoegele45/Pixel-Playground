@@ -1,0 +1,94 @@
+body {
+    height: 100%;
+    font-family: Andale Mono, monospace;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: black;  
+    background-image: url("../assets/images/pixel-pond.png");
+    background-size: cover;
+}
+
+
+table{
+    color: white;
+    padding-top: 0px;
+    background-color: rgb(13, 53, 0);
+}
+th{
+    position: relative;
+}
+#scores_left{
+    padding-right: 250px;
+    font-family: OCR A Std, monospace; 
+    font-size: 30px;
+    color: rgb(255, 100, 170);
+    text-transform: uppercase;
+
+}
+#scores_right{
+    padding-left: 250px;
+    font-family: OCR A Std, monospace; 
+    font-size: 30px;
+    color: rgb(255, 100, 170);
+    text-transform: uppercase;
+}
+#scores_center{
+    font-family: OCR A Std, monospace; 
+    font-size: 30px;
+    color: rgb(255, 100, 170);
+    text-transform: uppercase;
+}
+
+#left{
+    padding-right: 250px;
+}
+#right{
+    padding-left: 250px;
+}
+
+h1{
+    text-align: center;
+    font-size: 100px;
+    font-family: OCR A Std, monospace; 
+    color: rgb(255, 100, 170);
+    text-transform: uppercase;
+    background-image: url(../assets/images/frog-header.png);
+    background-size: cover;
+
+    
+}
+
+#themehead {
+    text-align: center;
+    font-family: BarcadeNoBar; 
+    background-image: none;
+    font-size: 50px;
+    color: rgb(255, 100, 170);;
+}
+
+.theme {
+    font-family: OCR A Std, monospace; 
+    font-size: 30px;
+    color: rgb(255, 100, 170);;
+    background-color: rgb(13, 53, 0);
+}
+
+#settings {
+    line-height: 12px;
+    width: 18px;
+    font-size: 8pt;
+    font-family: tahoma;
+    margin-top: 1px;
+    margin-right: 2px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+button.home {
+    background-color: rgb(13, 53, 0);
+    font-family: Andale Mono, monospace;
+    color: rgb(255, 100, 170);
+    font-size: 50px;
+}

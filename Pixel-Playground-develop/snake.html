@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Snake HTML Game</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/snake-style.css">
+  <h1>High Score: </h1>
+  <h1 id="high-scoreboard"></h1>
+  <h1>Score:</h1>
+  <h1 id="scoreboard"></h1>
+</head>
+
+<div id="mute-button-container">
+  <button id="mute-button" style="top: 0; left: 0; position: absolute;">Mute</button>
+</div>
+<audio id = "audio" loop>
+  <source src="assets/sounds/Castle.mp3" type="audio/mpeg">
+</audio>
+
+<body>
+<canvas width="400" height="400" id="game"></canvas>
+<script type="module" src="js/snake-script.js"></script>
+<button class="home" onclick="window.location.href = 'dashboard.html';">HOME</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  h1, h2{
+    color: white;
+  }
+
+  body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  #score {
+      color: aqua;
+      font-size: 20px; 
+}
+
+  div.title{
+    font-size: 60px;
+  }
+
+button.home {
+  background-color: rgb(255, 36, 179);
+  font-family: Andale Mono, monospace;
+  font-size: 50px;
+}

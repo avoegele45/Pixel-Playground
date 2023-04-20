@@ -1,0 +1,46 @@
+body {
+    height: 100%;
+    font-family: Andale Mono, monospace;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: white;  
+    background-image: url("../assets/images/pixel-pond.png");
+    background-size: cover;
+    background-position: center;
+}
+
+div {
+    width: 300px;
+    background-color: rgb(13, 53, 0);
+    color: rgb(255, 255, 255);
+    padding: 50px;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+    font-family: OCR A Std, monospace; 
+    color: rgb(255, 100, 170);
+    text-transform: uppercase;
+    background-image: url(../assets/images/frog-header.png);
+    background-size: 240px;
+}
+
+button.home {
+    background-color: rgb(13, 53, 0);
+    font-family: Andale Mono, monospace;
+    color: rgb(255, 100, 170);
+    font-size: 50px;
+}
+
+@font-face{
+    font-family: BarcadeNoBar;
+    src: url(BarcadeNoBar.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+#newfont{
+    font-family: BarcadeNoBar;
+}
